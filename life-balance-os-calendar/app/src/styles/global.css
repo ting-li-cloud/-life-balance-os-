@@ -1,0 +1,49 @@
+@import './tokens.css';
+
+html,
+body {
+  margin: 0;
+  background: var(--paper-1);
+  color: var(--ink-2);
+  font: var(--text-body-font);
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--fox-700); text-decoration: underline; text-decoration-color: var(--fox-300); text-underline-offset: 3px; }
+a:hover { color: var(--fox-500); text-decoration-color: currentColor; }
+::selection { background: var(--saffron-300); color: var(--ink-1); }
+button { font: inherit; }
+button:focus-visible,
+[role='tab']:focus-visible,
+label:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--sky-100); border-radius: 999px; }
+
+/* Hover state for 今日生活照顧 cards (design: style-hover → paper-2). */
+.care-card:hover { background: var(--paper-2) !important; }
+.nav-item:hover { background: var(--paper-2); }
+.nav-item[aria-current='page']:hover { background: var(--paper-0); }
+
+/* Narrow screens: hide the sidebar and tighten the page gutter. */
+@media (max-width: 860px) {
+  .sidebar { display: none !important; }
+  .page-gutter {
+    padding-left: max(16px, env(safe-area-inset-left, 0px)) !important;
+    padding-right: max(16px, env(safe-area-inset-right, 0px)) !important;
+  }
+}
+@media (max-width: 560px) {
+  .focus-card { grid-template-columns: minmax(0, 1fr) !important; }
+  .focus-hero { display: none !important; }
+}
+
+.chip[aria-checked="false"]:hover { background: var(--paper-2) !important; }
+
+/* 行事曆 */
+.event-chip { transition: filter var(--dur-base) var(--ease-out); }
+.event-chip:hover { filter: brightness(0.97); }
+@media (max-width: 760px) {
+  .cal-week { grid-template-columns: minmax(0, 1fr) !important; }
+}
+@media (max-width: 560px) {
+  .month-line { display: none !important; }
+  .month-count { display: inline !important; }
+}

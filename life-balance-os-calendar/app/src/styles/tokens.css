@@ -1,0 +1,82 @@
+/* Life Balance OS design tokens — copied from the Claude Design system (tokens/*.css). Fonts load in index.html. */
+:root{
+/* Paper & ink — base neutrals (warm, never pure white/black) */
+--paper-0:#FFFDF8;--paper-1:#FAF6EE;--paper-2:#F3ECDF;--paper-3:#E8DECC;
+--ink-1:#2B2722;--ink-2:#5C554B;--ink-3:#8A8173;--ink-4:#B9AF9F;
+--line-1:#E3D9C7;--line-2:#CFC3AE;--line-ink:#2B2722;
+
+/* Watercolor pigments — from the botanical + fox references */
+--saffron-100:#FDF1C9;--saffron-300:#F7D77A;--saffron-500:#EDB93B;--saffron-700:#A97A12;
+--sage-100:#E6EEE5;--sage-300:#BBCFBC;--sage-500:#8FAE93;--sage-700:#4F6E55;
+--fox-100:#FBE3D2;--fox-300:#F2B48A;--fox-500:#D9733A;--fox-700:#9A4718;
+--dusk-100:#ECE6F2;--dusk-300:#C2B3D6;--dusk-500:#7E6A9E;--dusk-700:#4B3B66;
+--sky-100:#E4F0F8;--sky-300:#BCDBEE;--sky-500:#6FA8CF;--sky-700:#2F6A93;
+
+/* Life areas (生活領域) */
+--area-health:var(--sage-500);--area-work:var(--sky-500);--area-relation:var(--fox-500);
+--area-growth:var(--saffron-500);--area-rest:var(--dusk-500);--area-money:#B8956A;
+
+/* Semantic */
+--brand:var(--fox-500);--brand-strong:var(--fox-700);--brand-soft:var(--fox-100);
+--success:var(--sage-700);--success-soft:var(--sage-100);
+--warning:var(--saffron-700);--warning-soft:var(--saffron-100);
+--danger:#B4442E;--danger-soft:#F6DCD4;
+--info:var(--sky-700);--info-soft:var(--sky-100);
+
+--text-strong:var(--ink-1);--text-body:var(--ink-2);--text-muted:var(--ink-3);--text-faint:var(--ink-4);--text-on-brand:#FFFDF8;
+--surface-page:var(--paper-1);--surface-card:var(--paper-0);--surface-sunken:var(--paper-2);--surface-hover:var(--paper-2);--surface-inverse:var(--ink-1);
+--border-subtle:var(--line-1);--border-default:var(--line-2);--border-ink:var(--line-ink);
+--focus-ring:var(--sky-500);
+--scrim:rgba(43,39,34,.36);
+}
+:root{
+--font-display:'LXGW WenKai TC','Noto Serif TC',serif;
+--font-body:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
+--font-hand:'Iansui','LXGW WenKai TC',cursive;
+--font-mono:'DM Mono',ui-monospace,monospace;
+
+--fs-display:44px;--fs-h1:32px;--fs-h2:24px;--fs-h3:19px;--fs-body-lg:17px;--fs-body:15px;--fs-small:13px;--fs-micro:11px;
+--lh-tight:1.25; /* @kind font */
+--lh-snug:1.4; /* @kind font */
+--lh-body:1.7; /* @kind font */
+
+--fw-regular:400; /* @kind font */
+--fw-medium:500; /* @kind font */
+--fw-bold:700; /* @kind font */
+
+--tracking-cjk:.04em; /* @kind font */
+--tracking-label:.08em; /* @kind font */
+
+
+--text-display:var(--fw-regular) var(--fs-display)/var(--lh-tight) var(--font-display);
+--text-h1:var(--fw-regular) var(--fs-h1)/var(--lh-tight) var(--font-display);
+--text-h2:var(--fw-bold) var(--fs-h2)/var(--lh-snug) var(--font-display);
+--text-h3:var(--fw-medium) var(--fs-h3)/var(--lh-snug) var(--font-body);
+--text-body-font:var(--fw-regular) var(--fs-body)/var(--lh-body) var(--font-body);
+--text-label:var(--fw-medium) var(--fs-small)/1.3 var(--font-body);
+}
+:root{
+--space-0:0;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;
+--pad-card:20px;--pad-page:32px;--gap-stack:12px;
+--content-max:1120px;--sidebar-w:240px;
+--hit-min:40px; /* @kind spacing */
+}
+:root{
+--radius-xs:6px;--radius-sm:10px;--radius-md:14px;--radius-lg:20px;--radius-xl:28px;--radius-pill:999px;
+--border-w:1px;--border-w-ink:1.5px;
+
+/* Soft, warm, low shadows — paper lying on paper */
+--shadow-1:0 1px 2px rgba(92,72,40,.06),0 1px 1px rgba(92,72,40,.04);
+--shadow-2:0 4px 14px -4px rgba(92,72,40,.14),0 1px 3px rgba(92,72,40,.06);
+--shadow-3:0 18px 40px -12px rgba(92,72,40,.24),0 2px 6px rgba(92,72,40,.08);
+--shadow-ink:2px 2px 0 var(--ink-1); /* doodle "sticker" offset */
+--shadow-inset:inset 0 1px 2px rgba(92,72,40,.08);
+
+--ease-out:cubic-bezier(.22,.8,.3,1); /* @kind other */
+--ease-soft:cubic-bezier(.4,.1,.3,1); /* @kind other */
+--dur-fast:120ms; /* @kind other */
+--dur-base:220ms; /* @kind other */
+--dur-slow:420ms; /* @kind other */
+--press-scale:.97; /* @kind other */
+--blur-glass:12px; /* @kind other */
+}
